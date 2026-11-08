@@ -1,316 +1,238 @@
-# WebOS Custom Launcher - Fase 1: Setup & Investigación ✅
+# 🚀 LG TV Custom Home - Home Replacement para webOS 33
 
-> 🚀 **Estado**: Fase 1 Completada | Listo para comenzar Fase 2
+Crear un **launcher personalizado y rápido** para tu TV LG webOS 33 con interfaz tipo Nintendo Wii.
 
----
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![webOS 33](https://img.shields.io/badge/webOS-33-green.svg)](https://webostv.developer.lge.com/)
 
-## 📚 Documentación Disponible
+## 📌 ¿Qué es esto?
 
-### Para Empezar Ahora
-1. **[INICIO_RAPIDO.md](INICIO_RAPIDO.md)** ⭐ **COMIENZA AQUÍ**
-   - 5 pasos en 2-3 horas
-   - Guía paso a paso
-   - Todo lo que necesitas saber para empezar
+Un proyecto para **reemplazar el home (launcher) nativo lento** de tu TV LG webOS 33 con uno personalizado que sea:
 
-### Documentación del Proyecto
-2. **[PLAN.md](PLAN.md)**
-   - Vision completa del proyecto (12 semanas)
-   - 7 fases de desarrollo
-   - Arquitectura general
-   - Métricas de éxito
+- ⚡ **Mucho más rápido** - Reducir input delay de ~500ms a <100ms
+- 🎨 **Más divertido** - Interfaz estilo Nintendo Wii con colores vibrantes
+- 📱 **Totalmente funcional** - Acceso a todas tus apps de streaming
+- 🔒 **100% seguro** - Sin modificar ROM, completamente reversible
 
-3. **[FASE1_INVESTIGACION.md](FASE1_INVESTIGACION.md)**
-   - Investigación detallada de webOS 33
-   - Hallazgos técnicos
-   - Opciones de frameworks
-   - Soluciones para problemas identificados
+## 🎯 Objetivo
 
-### Listas de Control y Referencia
-4. **[CHECKLIST_FASE1.md](CHECKLIST_FASE1.md)**
-   - Checklist completo de setup
-   - Verificaciones paso a paso
-   - Troubleshooting común
+```
+┌─────────────────────────────────────────┐
+│ Tu TV LG webOS 33 LENTA (~500ms delay)  │
+│    ↓ (Instalar Custom Home)             │
+│ Tu TV LG webOS 33 RÁPIDA (<100ms delay) │
+│    + Interfaz divertida estilo Wii      │
+└─────────────────────────────────────────┘
+```
 
-5. **[RECURSOS_REFERENCIA.md](RECURSOS_REFERENCIA.md)**
-   - Links importantes
-   - Comandos útiles
-   - Ejemplos de código Luna Service API
-   - Guía de debugging
-   - Códigos de botones remote control
+## ⚡ Quick Start
 
-### 🔄 Seguridad & Revert
-6. **[REVERT_GUIDE.md](REVERT_GUIDE.md)** ⭐ **CRÍTICO LEER PRIMERO**
-   - Guía completa de revert (RESTAURAR a estado original)
-   - 3 opciones de revert (script automático, manual SSH, botón nuclear)
-   - Sistema de backup automático explicado
-   - Soluciones para problemas comunes
-   - Preguntas frecuentes
-   - **TL;DR: Todo está respaldado, NUNCA perderás datos**
+### 5 Pasos en 2-3 horas
 
-### Scripts Automatizados
-6. **[setup.sh](setup.sh)**
-   - Instala dependencias
-   - Crea estructura de proyecto
-   - Setup automático (bash setup.sh)
-
-7. **[configure-tv.sh](configure-tv.sh)**
-   - Configura conexión SSH a TV
-   - Verifica conectividad
-   - Setup interactivo (bash configure-tv.sh)
-
-## 🎯 Objetivo del Proyecto
-
-Crear un **home replacement personalizado para LG webOS 33** que sea:
-
-- ⚡ **Más rápido** - Reducir input delay de ~500ms a <100ms
-- 🎨 **Más divertido** - Interfaz estilo Nintendo Wii
-- 📱 **Funcional** - Acceso a apps de streaming
-- 🔒 **Seguro** - Sin modificar ROM ni hardware
-- 🔄 **100% Reversible** - Backup automático antes de cambios
-
----
-
-## 🚀 Comienza en 5 Minutos
-
-### Opción 1: Automática (Recomendado)
 ```bash
-# 1. Descargar/copiar setup.sh
+# 1️⃣ LEE LA GUÍA DE REVERT (5 minutos)
+# Importante entender que TODO es reversible
+cat REVERT_GUIDE.md
+
+# 2️⃣ PREPARA TU ENTORNO
+npm install -g @webostv/webos-cli
+node --version  # Verificar >= v14
+
+# 3️⃣ EJECUTA SETUP
 bash setup.sh
 
-# 2. Seguir instrucciones en pantalla
-# Creará carpeta webos-launcher/ con todo listo
-
-# 3. Configurar conexión TV
+# 4️⃣ CONFIGURA LA TV
 bash configure-tv.sh
 
-# 4. ¡A trabajar!
+# 5️⃣ ¡LISTO!
 cd webos-launcher
-npm run dev
+npm install && npm run dev
 ```
 
-### Opción 2: Manual
-Ver [INICIO_RAPIDO.md](INICIO_RAPIDO.md) para pasos detallados
+Ver [INICIO_RAPIDO.md](INICIO_RAPIDO.md) para detalles.
 
----
+## 📚 Documentación
 
-## 📋 Fases del Proyecto
+| Documento | Descripción | Tiempo |
+|-----------|-------------|--------|
+| **[00_LEE_PRIMERO.txt](00_LEE_PRIMERO.txt)** | Índice general del proyecto | 5 min |
+| **[REVERT_GUIDE.md](REVERT_GUIDE.md)** ⭐ | Guía de seguridad y revert | 10 min |
+| **[INICIO_RAPIDO.md](INICIO_RAPIDO.md)** | Setup en 5 pasos | 15 min |
+| **[PLAN.md](PLAN.md)** | Plan maestro (6 fases, 8 semanas) | 20 min |
+| **[FASE1_INVESTIGACION.md](FASE1_INVESTIGACION.md)** | Hallazgos técnicos | 30 min |
+| **[CHECKLIST_FASE1.md](CHECKLIST_FASE1.md)** | Verificaciones paso a paso | 20 min |
+| **[RECURSOS_REFERENCIA.md](RECURSOS_REFERENCIA.md)** | APIs, comandos, ejemplos | 30 min |
 
-| Fase | Objetivo | Duración | Estado |
-|------|----------|----------|--------|
-| **1** | Setup & Investigación | 2 sem | ✅ Completada |
-| **2** | Prototipo Básico | 2 sem | ⏳ Siguiente |
-| **3** | Interfaz Wii | 2 sem | 📋 Planificada |
-| **4** | Gestor Apps Avanzado | 2 sem | 📋 Planificada |
-| **5** | Optimización Speed | 2 sem | 📋 Planificada |
-| **6** | Testing & Refinamiento | 1 sem | 📋 Planificada |
-| **7** | Deployment | 1+ sem | 📋 Planificada |
+## 🛡️ Seguridad & Reversibilidad
 
-Ver [PLAN.md](PLAN.md) para detalles de cada fase.
+### ✅ 100% Reversible
 
----
+Antes de instalar, se crea backup automático:
 
-## 📁 Estructura de Archivos
-
-```
-webos-launcher-project/
-│
-├── README.md                    ← Estás aquí
-├── INICIO_RAPIDO.md            ← Guía 5 pasos
-├── PLAN.md                     ← Plan completo 12 semanas
-├── FASE1_INVESTIGACION.md      ← Hallazgos técnicos
-├── CHECKLIST_FASE1.md          ← Verificaciones
-├── RECURSOS_REFERENCIA.md      ← APIs, comandos, ejemplos
-│
-├── setup.sh                    ← Script setup automático
-├── configure-tv.sh             ← Script configurar TV
-│
-└── webos-launcher/             ← PROYECTO (creado por setup.sh)
-    ├── package.json
-    ├── webos-build.json
-    ├── README.md
-    ├── src/
-    │   ├── index.html
-    │   ├── js/
-    │   │   └── app.js
-    │   ├── styles/
-    │   │   └── theme.css
-    │   ├── components/
-    │   └── services/
-    └── node_modules/
+```bash
+/backup/
+├─ home-original-TIMESTAMP.tar.gz  # Home original
+├─ webos-config-TIMESTAMP.tar.gz   # Configuración
+├─ apps-list-TIMESTAMP.txt          # Lista de apps
+└─ revert-instructions-TIMESTAMP.txt # Instrucciones
 ```
 
----
+### 3 Opciones de Revert
 
-## ✅ Qué Incluye Fase 1
+```bash
+# Opción 1: Script Automático (RECOMENDADO - 2-3 min)
+bash scripts/revert-home.sh
 
-### Documentación
-- ✅ Plan maestro completo (7 fases)
-- ✅ Investigación técnica de webOS 33
-- ✅ Análisis de frameworks disponibles
-- ✅ Guía de arquitectura
-- ✅ Recursos y referencias
+# Opción 2: Manual por SSH (5-10 min)
+ssh -p 9922 root@<TU_IP_TV>
+cd /backup
+tar -xzf home-original-*.tar.gz
+cp -r home-original/* /var/luna/applications/com.webos.app.home/
+reboot
 
-### Scripts & Automatización
-- ✅ Script de setup automático
-- ✅ Script de configuración TV
-- ✅ Estructura base del proyecto
-- ✅ Archivo package.json
-- ✅ HTML/CSS/JS base
+# Opción 3: Botón Nuclear (10-15 min)
+ssh -p 9922 root@<TU_IP_TV>
+restore-webos-from-backup
+```
 
-### Herramientas
-- ✅ webOS CLI configurado
-- ✅ Emulador webOS (opcional)
-- ✅ VS Code extension recomendada
-- ✅ SSH configurado
+**⏱️ En cualquier caso: Max 15 minutos para restaurar**
 
----
+## 📋 Plan de Desarrollo (8 Semanas)
 
-## 🎯 Next Steps
+```
+Fase 1 (Semana 1)  ✅ COMPLETADA
+└─ Setup & Investigación
 
-### Hoy/Mañana (2-3 horas)
-1. Leer [INICIO_RAPIDO.md](INICIO_RAPIDO.md)
-2. Ejecutar `bash setup.sh`
-3. Ejecutar `bash configure-tv.sh`
-4. Lograr Hello World en TV
-5. Explorar [RECURSOS_REFERENCIA.md](RECURSOS_REFERENCIA.md)
+Fase 2 (Semanas 2-3)
+└─ Prototipo del Launcher
 
-### Esta Semana (5-8 horas)
-1. Completar [CHECKLIST_FASE1.md](CHECKLIST_FASE1.md)
-2. Familiarizarse con webOS CLI
-3. Conectar por SSH a TV y ver logs
-4. Estudiar [FASE1_INVESTIGACION.md](FASE1_INVESTIGACION.md)
-5. Revisar Luna Service API básica
+Fase 3 (Semanas 4-5)
+└─ Interfaz Wii-Style
 
-### Próxima Semana (Fase 2)
-1. Aprender Enyo Framework
-2. Crear componentes base
-3. Implementar gestor de aplicaciones
-4. Diseñar interfaz Wii-style
-5. Medir performance
+Fase 4 (Semana 6)
+└─ Funcionalidades Avanzadas
+
+Fase 5 (Semana 7)
+└─ Optimización & Testing
+
+Fase 6 (Semana 8)
+└─ Deployment & Documentación
+```
 
 Ver [PLAN.md](PLAN.md) para detalles completos.
 
----
+## 📁 Estructura
 
-## 🆘 Ayuda & Troubleshooting
+```
+lg-tv-custom-home/
+│
+├── 📄 DOCUMENTACIÓN
+│   ├── 00_LEE_PRIMERO.txt           ← Comienza aquí
+│   ├── README.md                    ← Índice del proyecto
+│   ├── PLAN.md                      ← Plan maestro
+│   ├── REVERT_GUIDE.md              ← Guía de seguridad
+│   ├── INICIO_RAPIDO.md             ← Setup en 5 pasos
+│   ├── FASE1_INVESTIGACION.md       ← Hallazgos técnicos
+│   ├── CHECKLIST_FASE1.md           ← Verificaciones
+│   └── RECURSOS_REFERENCIA.md       ← APIs y comandos
+│
+├── 🔧 SCRIPTS
+│   ├── setup.sh                     ← Setup automático
+│   └── configure-tv.sh              ← Config de TV
+│
+└── 📦 PROYECTO (se crea con setup.sh)
+    └── webos-launcher/
+        ├── package.json
+        ├── webos-build.json
+        ├── src/
+        ├── scripts/
+        └── node_modules/
+```
 
-### 🔄 ANTES DE CUALQUIER CAMBIO
-**Consultar**: [REVERT_GUIDE.md](REVERT_GUIDE.md) - Sistema de backup y revert
-- ✅ Cómo funciona el backup automático
-- ✅ 3 opciones para revert (script, SSH manual, botón nuclear)
-- ✅ No perderás datos
-- ✅ Totalmente reversible
+## 🎯 Requisitos
 
-### Problemas Comunes
-Consultar: [CHECKLIST_FASE1.md#troubleshooting](CHECKLIST_FASE1.md)
-
-### Comandos Útiles
-Consultar: [RECURSOS_REFERENCIA.md#comandos-útiles](RECURSOS_REFERENCIA.md)
-
-### Ejemplos de Código
-Consultar: [RECURSOS_REFERENCIA.md#luna-service-api](RECURSOS_REFERENCIA.md)
-
----
-
-## 📚 Recursos Externos
-
-| Recurso | URL |
-|---------|-----|
-| webOS Developer Portal | https://webostv.developer.lge.com/ |
-| Enyo Framework | https://enyo.com/docs/ |
-| webOS Open Source | https://github.com/webosose |
-| Luna Service API | https://webostv.developer.lge.com/develop/references/luna-service-api/ |
-
----
-
-## 📊 Métricas de Éxito
-
-**Fase 1 - Completada cuando tengas:**
-
-- ✅ Entorno de desarrollo setup
-- ✅ TV con Developer Mode + SSH habilitado
-- ✅ Conexión SSH funcionando
-- ✅ App Hello World en la TV
-- ✅ Capaz de cambiar código y ver cambios en vivo
-- ✅ webOS CLI funcionando
-- ✅ Documentación entendida
-
----
+- **TV LG** con webOS 33
+- **PC de desarrollo** con Node.js 14+
+- **SSH habilitado** en TV (Developer Mode)
+- **Conexión de red** estable (Ethernet recomendado)
 
 ## 💡 Pro Tips
 
-### Desarrollo Iterativo Rápido
+### Desarrollo Rápido
 ```bash
 cd webos-launcher
-npm run install-tv    # Cambios se ven en vivo
+npm run install-tv    # Instala cambios en TV
+npm run launch        # Ejecuta la app
 ```
 
-### Debugging en Tiempo Real
+### Debugging
 ```bash
 ssh -p 9922 root@<IP_TV> tail -f /var/log/messages
 ```
 
-### Performance Testing
+### Performance
 ```bash
-# Medir tiempo de carga
 time npm run install-tv
 ```
 
----
+## ❓ FAQ
 
-## 🎓 Aprendizaje Recomendado
+### ¿Es seguro hacer cambios?
+✅ Completamente. Todo está respaldado y es 100% reversible.
 
-### Nivel Principiante (5-10 horas)
-1. JavaScript ES6+ (si no lo sabes)
-2. HTML5 & CSS3 básico
-3. Conceptos de webOS (qué es, cómo funciona)
+### ¿Perderé mis apps?
+❌ No. Solo se reemplaza el home. Apps y datos están seguros.
 
-### Nivel Intermedio (10-15 horas)
-1. Enyo Framework fundamentals
-2. Luna Service API básica
-3. Debugging en webOS
+### ¿Qué si algo sale mal?
+✅ Tienes 3 opciones de revert. Ver [REVERT_GUIDE.md](REVERT_GUIDE.md).
 
-### Nivel Avanzado (20+ horas)
-1. Optimización de performance
-2. Diseño de componentes reutilizables
-3. Patrones de arquitectura en webOS
+### ¿Necesito modificar hardware?
+❌ No. No tocamos ROM, bootloader, ni nada de hardware.
 
----
+### ¿Funciona con otras versiones de webOS?
+⚠️ Estos scripts son para webOS 33. Otras versiones pueden necesitar ajustes.
 
-## 📞 Contacto & Comunidad
+Ver más en [REVERT_GUIDE.md](REVERT_GUIDE.md) y [INICIO_RAPIDO.md](INICIO_RAPIDO.md).
 
-- **Stack Overflow**: Tag `webos`
-- **GitHub Issues**: Reportar bugs
-- **webOS Forum**: Hacer preguntas
-- **Reddit r/webOS**: Comunidad general
+## 🚀 Comenzar Ahora
 
----
+1. **Lee**: [00_LEE_PRIMERO.txt](00_LEE_PRIMERO.txt)
+2. **Lee**: [REVERT_GUIDE.md](REVERT_GUIDE.md) (seguridad)
+3. **Sigue**: [INICIO_RAPIDO.md](INICIO_RAPIDO.md)
+4. **Ejecuta**: `bash setup.sh`
+5. **Disfruta**: Tu TV más rápida ⚡
+
+## 📞 Ayuda
+
+- **Problemas**: Ver [CHECKLIST_FASE1.md](CHECKLIST_FASE1.md)
+- **Comandos**: Ver [RECURSOS_REFERENCIA.md](RECURSOS_REFERENCIA.md)
+- **Dudas sobre revert**: Ver [REVERT_GUIDE.md](REVERT_GUIDE.md)
 
 ## 📄 Licencia
 
 MIT - Libre para uso personal y comercial
 
----
+## 🎓 Aprendizaje
 
-## 👤 Autor
+### Requisitos Mínimos
+- JavaScript ES6+ básico
+- HTML5 & CSS3 básico
+- Conceptos de webOS (qué es, cómo funciona)
 
-Creado como guía de desarrollo para WebOS Custom Launcher.
-
----
+### Recursos Recomendados
+- [webOS Developer Portal](https://webostv.developer.lge.com/)
+- [Enyo Framework](https://enyo.com/docs/)
+- [webOS Open Source](https://github.com/webosose)
+- [Luna Service API](https://webostv.developer.lge.com/develop/references/luna-service-api/)
 
 ## 🎉 ¡Bienvenido!
 
-Este es el comienzo de un emocionante proyecto. 
+Este es el inicio de un proyecto emocionante para hacer tu TV más rápida y divertida.
 
-**Próximo destino**: [INICIO_RAPIDO.md](INICIO_RAPIDO.md) para los 5 pasos de setup.
-
-¿Preguntas? Consulta la documentación o revisa [RECURSOS_REFERENCIA.md](RECURSOS_REFERENCIA.md).
-
-**¡Vamos a crear algo genial! 🚀✨**
+**Próximo paso**: Abre [00_LEE_PRIMERO.txt](00_LEE_PRIMERO.txt)
 
 ---
 
-**Versión**: 1.0  
-**Última actualización**: 2026-11-07  
-**Estado**: 🟢 Fase 1 Completada - Listo para Fase 2
-
+**Versión**: 1.0 (Fase 1 - Completada)  
+**Estado**: 🟢 Listo para comenzar  
+**Seguridad**: 🔒 100% reversible
