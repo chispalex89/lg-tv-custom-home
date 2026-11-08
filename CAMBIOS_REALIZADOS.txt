@@ -1,0 +1,161 @@
+════════════════════════════════════════════════════════════════════════════════
+  ACTUALIZACIÓN DE DOCUMENTACIÓN - REVERT GUIDE
+════════════════════════════════════════════════════════════════════════════════
+
+FECHA: 2026-11-07
+CAMBIO: Creación de REVERT_GUIDE.md y actualización de documentos relacionados
+
+════════════════════════════════════════════════════════════════════════════════
+ ARCHIVOS NUEVOS
+════════════════════════════════════════════════════════════════════════════════
+
+✨ REVERT_GUIDE.md (8,648 bytes)
+   
+   Guía COMPLETA y detallada sobre cómo revertir cambios a la TV.
+   
+   Contenido:
+   • Conceptos clave (qué es revert, ¿es seguro?, ¿cuánto tiempo toma?)
+   • Sistema de seguridad (backups automáticos)
+   • 3 opciones de revert detalladas:
+     - Opción 1: Script automático (2-3 min, recomendado)
+     - Opción 2: Manual por SSH (5-10 min, alternativa)
+     - Opción 3: Botón nuclear (10-15 min, emergencia)
+   • Problemas comunes & soluciones (4 problemas cubiertos)
+   • Verificaciones pre-revert
+   • Matriz de decisión
+   • Proceso paso a paso
+   • Protección contra errores
+   • FAQ completa
+   • Comandos de referencia rápida
+
+════════════════════════════════════════════════════════════════════════════════
+ ARCHIVOS MODIFICADOS
+════════════════════════════════════════════════════════════════════════════════
+
+📝 README.md
+   Cambios:
+   • Añadida nueva sección "🔄 Seguridad & Revert"
+   • Link a REVERT_GUIDE.md marcado como "⭐ CRÍTICO LEER PRIMERO"
+   • Actualizado objetivo para incluir "100% Reversible"
+   • Sección de ayuda ahora destaca primero el REVERT_GUIDE.md
+   
+   Líneas afectadas: ~10-15 cambios distribuidos
+
+───────────────────────────────────────────────────────────────────────────────
+
+📝 PLAN.md
+   Cambios:
+   • Actualizado objetivo para incluir "100% Reversible"
+   • Reescrita sección "🛡️ Sistema de Revert"
+   • Convertida en resumen con link a REVERT_GUIDE.md
+   • Texto: "📖 LEE [REVERT_GUIDE.md] PARA INSTRUCCIONES DETALLADAS"
+   • "→ VER REVERT_GUIDE.md PARA DETALLES COMPLETOS"
+   • Actualizado "Revert Quick Reference" para apuntar a REVERT_GUIDE.md
+   
+   Líneas afectadas: ~95-150
+
+───────────────────────────────────────────────────────────────────────────────
+
+📝 00_LEE_PRIMERO.txt
+   Cambios:
+   • Reordenado orden de lectura (REVERT_GUIDE.md es ahora 2️⃣)
+   • Añadido REVERT_GUIDE.md con descripción completa
+   • Sección "🔄 Seguridad CRÍTICA" antes de pasos prácticos
+   • Actualizado contador de fases (antes 7️⃣ ahora 8️⃣ etc.)
+   
+   Líneas afectadas: ~10-40
+
+───────────────────────────────────────────────────────────────────────────────
+
+📝 INICIO_RAPIDO.md
+   Cambios:
+   • Añadida sección "⚠️ ANTES DE EMPEZAR: LEE LA GUÍA DE REVERT"
+   • Referencia a REVERT_GUIDE.md en FAQ
+   • Ampliada FAQ "¿Qué si algo sale mal?" con ejemplos de revert
+   • Añadida pregunta "¿Perderé datos si hago revert?"
+   • Sección troubleshooting ahora apunta a REVERT_GUIDE.md
+   • Actualizado título para incluir "(Home Replacement)"
+   
+   Líneas afectadas: ~5-50
+
+════════════════════════════════════════════════════════════════════════════════
+ ANÁLISIS DE CAMBIOS
+════════════════════════════════════════════════════════════════════════════════
+
+ANTES:
+  • Información de revert estaba dispersa en PLAN.md
+  • No había guía completa y detallada
+  • Usuarios nuevos podían perderse entre opciones
+  • FAQ no respondía preguntas específicas sobre reversibilidad
+
+DESPUÉS:
+  ✅ REVERT_GUIDE.md es un documento dedicado y exhaustivo
+  ✅ README, PLAN, INICIO_RAPIDO todos apuntan al documento
+  ✅ Está claro que TODO está respaldado y es reversible
+  ✅ 3 opciones de revert bien explicadas para cualquier escenario
+  ✅ Problemas comunes tienen soluciones inmediatas
+  ✅ Tranquilidad total: "Tus datos están seguros"
+
+════════════════════════════════════════════════════════════════════════════════
+ BENEFICIOS
+════════════════════════════════════════════════════════════════════════════════
+
+📚 PARA USUARIOS:
+   ✓ No tienen que buscar info de revert en muchos documentos
+   ✓ Una guía clara, completa y bien estructurada
+   ✓ Tres opciones para cualquier escenario
+   ✓ Tranquilidad: saben que TODO es reversible
+
+🏗️ PARA MANTENIMIENTO:
+   ✓ Si hay que cambiar procedimientos, es un archivo
+   ✓ No duplicar info en múltiples lugares
+   ✓ Fácil de actualizar con nuevos procedimientos
+   ✓ Centralizado y consistente
+
+🎯 PARA EL PROYECTO:
+   ✓ Enfatiza seguridad como característica principal
+   ✓ Muestra confianza en el sistema de backup
+   ✓ Reduce miedo de usuarios a hacer cambios
+   ✓ Documentación profesional y completa
+
+════════════════════════════════════════════════════════════════════════════════
+ CÓMO USAR LOS CAMBIOS
+════════════════════════════════════════════════════════════════════════════════
+
+NUEVO USUARIO:
+   1. Lee README.md
+   2. Lee REVERT_GUIDE.md (5 minutos - tranquilidad)
+   3. Lee INICIO_RAPIDO.md
+   4. Ejecuta setup.sh
+   5. Listo para comenzar
+
+USUARIO CON DUDAS:
+   • ¿Qué si algo falla? → REVERT_GUIDE.md
+   • ¿Es seguro? → REVERT_GUIDE.md
+   • ¿Cómo restauro? → REVERT_GUIDE.md
+   • ¿Perderé datos? → REVERT_GUIDE.md
+
+DESARROLLADOR:
+   • Todos los documentos apuntan a REVERT_GUIDE.md
+   • Info está centralizada y no duplicada
+   • Fácil mantener procedimientos actualizados
+
+════════════════════════════════════════════════════════════════════════════════
+ RESUMEN
+════════════════════════════════════════════════════════════════════════════════
+
+Archivos nuevos: 1 (REVERT_GUIDE.md - 8.6 KB)
+Archivos modificados: 4 (README.md, PLAN.md, 00_LEE_PRIMERO.txt, INICIO_RAPIDO.md)
+Total de cambios: ~100-150 líneas distribuidas
+
+Impacto:
+✨ MAYOR SEGURIDAD: Procedimientos de revert claramente documentados
+✨ MEJOR UX: Usuarios saben exactamente qué hacer en cualquier escenario
+✨ CONFIANZA: Énfasis en reversibilidad y protección de datos
+
+════════════════════════════════════════════════════════════════════════════════
+
+COMPLETADO: 2026-11-07 T 21:15:50
+VERSIÓN DOCUMENTACIÓN: 2.0 (Con Guía de Revert Completa)
+
+════════════════════════════════════════════════════════════════════════════════
